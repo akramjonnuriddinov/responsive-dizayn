@@ -91,6 +91,7 @@ img {
   padding-top: 40px;
   padding-bottom: 40px;
   font-weight: 400;
+  font-size: 20px;
 }
 
 .site-header__container {
@@ -101,13 +102,18 @@ img {
 .site-header__logo {
   margin-right: 160px;
   text-decoration: none;
+  flex-shrink: 0;
 }
 
 .site-header__logo-img {
   display: block;
-  min-width: 155px;
+  width: 155px;
   height: 45px;
   flex-shrink: 0;
+}
+
+.site-header__toggler {
+  display: none;
 }
 
 /* SITENAV */
@@ -128,8 +134,9 @@ img {
 
 .sitenav__link {
   text-decoration: none;
-  font-size: 20px;
   color: #000000;
+  white-space: nowrap;
+  display: block;
 }
 
 .sitenav__link:hover {
@@ -149,6 +156,7 @@ img {
   padding: 13px 20px;
   text-decoration: none;
   color: #000000;
+  font-size: 16px;
   border-radius: 8px;
   transition: background-color 0.4s ease,
     color 0.4s ease;
@@ -167,3 +175,76 @@ img {
   margin-left: auto;
 }
 
+
+/* RESPONSIVNESS */
+@media only screen and (max-width: 1300px) {
+  .site-header__logo,
+  .site-header__sitenav {
+    margin-right: 60px;
+  }
+}
+
+@media only screen and (max-width: 1180px) {
+  .site-header {
+    font-size: 18px;
+  }
+
+  .sitenav__item:not(:last-child) {
+    margin-right: 25px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .site-header {
+    position: relative;
+    z-index: 99;
+  }
+  .site-header__container {
+    align-items: stretch;
+  }
+
+  .site-header__sitenav {
+    display: none;
+  }
+
+  .site-header__sitenav--open {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #fff;
+    margin-right: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 100%;
+  }
+
+  .site-header__toggler {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 8px 16px;
+    margin-left: 30px;
+  }
+
+  .site-header__toggler-icon {
+    min-width: 24px;
+  }
+
+  .sitenav__list {
+    flex-direction: column;
+  }
+
+  .sitenav__item:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .sitenav__link {
+    text-align: right;
+  }
+}
