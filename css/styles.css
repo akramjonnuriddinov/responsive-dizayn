@@ -43,6 +43,11 @@ html {
   scroll-behavior: smooth;
 }
 
+*:focus {
+  outline: 3px dashed #000000;
+  outline-offset: 3px;
+}
+
 *, *::after, *::before {
   box-sizing: inherit;
 }
@@ -80,3 +85,85 @@ img {
 .main-content {
   flex-grow: 1;
 }
+
+/* SITE-HEADER */
+.site-header {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  font-weight: 400;
+}
+
+.site-header__container {
+  display: flex;
+  align-items: center;
+}
+
+.site-header__logo {
+  margin-right: 160px;
+  text-decoration: none;
+}
+
+.site-header__logo-img {
+  display: block;
+  min-width: 155px;
+  height: 45px;
+  flex-shrink: 0;
+}
+
+/* SITENAV */
+.site-header__sitenav {
+  margin-right: 100px;
+}
+
+.sitenav__list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.sitenav__item:not(:last-child) {
+  margin-right: 40px;
+}
+
+.sitenav__link {
+  text-decoration: none;
+  font-size: 20px;
+  color: #000000;
+}
+
+.sitenav__link:hover {
+  opacity: 0.8;
+}
+
+.sitenav__link:active {
+  opacity: 0.6;
+}
+
+.arrow-button {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid #000000;
+  white-space: nowrap;
+  padding: 13px 20px;
+  text-decoration: none;
+  color: #000000;
+  border-radius: 8px;
+  transition: background-color 0.4s ease,
+    color 0.4s ease;
+}
+
+.arrow-button:hover {
+  background-color: #000000;
+  color: #fff;
+}
+
+.arrow-button__inner {
+  margin-right: 10px;
+}
+
+.site-header__cta {
+  margin-left: auto;
+}
+
