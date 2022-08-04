@@ -1,3 +1,39 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-Light.woff2") format("woff2"),
+    url("../fonts/Poppins-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-Medium.woff2") format("woff2"),
+    url("../fonts/Poppins-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Neue Machina Plain";
+  src: url("../fonts/PPNeueMachina-PlainUltrabold.woff2") format("woff2"),
+    url("../fonts/PPNeueMachina-PlainUltrabold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-Regular.woff2") format("woff2"),
+    url("../fonts/Poppins-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 
 /* GLOBAL */
@@ -18,8 +54,9 @@ body {
   background-color: #fff;
   font-size: 16px;
   line-height: 1.5;
-  font-family: "Arial", sans-serif;
-  color: #222;
+  font-family: "Poppins", "Arial", sans-serif;
+  color: #000000;
+  font-weight: 300;
   margin: 0;
   padding: 0;
 }
@@ -32,9 +69,9 @@ img {
 /* CONTAINER */
 .container {
   width: 100%;
-  max-width: 1200px;
-  padding-left: 50px;
-  padding-right: 50px;
+  max-width: 1480px;
+  padding-left: 30px;
+  padding-right: 30px;
   margin-left: auto;
   margin-right: auto;
 }
